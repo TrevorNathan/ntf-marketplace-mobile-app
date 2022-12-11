@@ -13,7 +13,16 @@ const Splash = ({ navigation }) => {
 				style={styles.logo}
 				source={require("../assets/vremcast_square.png")}
 			/>
-			<Text style={{ fontSize: 30, fontWeight: "bold" }}>VREMCAST</Text>
+			<Text
+				style={{
+					color: "white",
+					fontSize: 30,
+					fontWeight: "bold",
+					marginTop: "75%",
+				}}
+			>
+				VREMCAST
+			</Text>
 		</View>
 	);
 };
@@ -27,7 +36,7 @@ const styles = StyleSheet.create({
 	logo: {
 		width: 300,
 		height: 300,
-		margin: 20,
+		marginTop: "30%",
 	},
 });
 
