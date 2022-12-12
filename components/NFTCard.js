@@ -17,7 +17,7 @@ const NFTCard = ({ data }) => {
 				...SHADOWS.dark,
 			}}
 		>
-			{/* IMAGE & LIKE-BUTTON */}
+			{/* IMAGE + LIKE-BUTTON */}
 			<View style={{ width: "100%", height: 250 }}>
 				<Image
 					source={data.image}
@@ -35,9 +35,11 @@ const NFTCard = ({ data }) => {
 			</View>
 
 			{/* INFO */}
-			<SubInfo />
+			<View>
+				<SubInfo />
+			</View>
 
-			{/* TITLE */}
+			{/* TITLE + PRICE + BUTTON */}
 			<View
 				style={{
 					width: "100%",
@@ -50,23 +52,22 @@ const NFTCard = ({ data }) => {
 					titleSize={SIZES.large}
 					subTitleSize={SIZES.small}
 				/>
-			</View>
 
-			{/* PRICE & BUTTON */}
-			<View
-				style={{
-					marginTop: SIZES.font,
-					flexDirection: "row",
-					justifyContent: "space-between",
-					alignItems: "center",
-				}}
-			>
-				<EthPrice price={data.price} />
-				<RectButton
-					minWidth={120}
-					fontSize={SIZES.font}
-					handlePress={() => navigation.navigate("Details", { data })}
-				/>
+				<View
+					style={{
+						marginTop: SIZES.font,
+						flexDirection: "row",
+						justifyContent: "space-between",
+						alignItems: "center",
+					}}
+				>
+					<EthPrice price={data.price} />
+					<RectButton
+						minWidth={120}
+						fontSize={SIZES.font}
+						handlePress={() => navigation.navigate("Details", { data })}
+					/>
+				</View>
 			</View>
 		</View>
 	);
