@@ -38,28 +38,16 @@ const App = () => {
 				<Stack.Screen
 					name='Splash'
 					component={Splash}
-					options={{
-						header: () => null,
-					}}
-				/>
-
-				{/* HOME SCREEN */}
-				<Stack.Screen
-					name='Home'
-					component={Home}
 					// options={{
 					// 	header: () => null,
 					// }}
 				/>
 
+				{/* HOME SCREEN */}
+				<Stack.Screen name='Home' component={Home} />
+
 				{/* DETAILS SCREEN */}
-				<Stack.Screen
-					name='Details'
-					component={Details}
-					options={{
-						header: () => null,
-					}}
-				/>
+				<Stack.Screen name='Details' component={Details} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
