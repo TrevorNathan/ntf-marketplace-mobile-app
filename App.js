@@ -37,7 +37,7 @@ const App = () => {
 				{/* SPLASH SCREEN */}
 				<Stack.Screen
 					name='Splash'
-					component={Splash}
+					component={Home}
 					// options={{
 					// 	header: () => null,
 					// }}
