@@ -36,7 +36,7 @@ const DetailsBid = ({ bid }) => {
 				<Text
 					style={{
 						fontFamily: FONTS.regular,
-						fontSize: SIZES.small + 2,
+						fontSize: SIZES.small - 2,
 						color: COLORS.secondary,
 						marginTop: 3,
 					}}
