@@ -1,5 +1,5 @@
-import { View, Text, Image, TextInput } from "react-native";
-import { COLORS, SIZES, SHADOWS, assets, FONTS } from "../constants";
+import { View, Text, Image, TextInput } from 'react-native';
+import { COLORS, SIZES, SHADOWS, assets, FONTS } from '../constants';
 
 const HomeHeader = ({ onSearch }) => {
 	return (
@@ -7,9 +7,9 @@ const HomeHeader = ({ onSearch }) => {
 			{/* PROFILE-PICTURE + BUDGE */}
 			<View
 				style={{
-					flexDirection: "row",
-					justifyContent: "space-between",
-					alignItems: "center",
+					flexDirection: 'row',
+					justifyContent: 'space-between',
+					alignItems: 'center',
 				}}
 			>
 				<Image
@@ -25,13 +25,13 @@ const HomeHeader = ({ onSearch }) => {
 					<Image
 						source={assets.person01}
 						resizeMode='contain'
-						style={{ width: "100%", height: "100%" }}
+						style={{ width: '100%', height: '100%' }}
 					/>
 					<Image
 						source={assets.badge}
 						resizeMode='contain'
 						style={{
-							position: "absolute",
+							position: 'absolute',
 							bottom: 0,
 							right: 0,
 							width: 15,
@@ -68,11 +68,11 @@ const HomeHeader = ({ onSearch }) => {
 			<View style={{ marginTop: SIZES.font }}>
 				<View
 					style={{
-						width: "100%",
+						width: '100%',
 						borderRadius: SIZES.font,
 						backgroundColor: COLORS.gray,
-						flexDirection: "row",
-						alignItems: "center",
+						flexDirection: 'row',
+						alignItems: 'center',
 						paddingHorizontal: SIZES.font,
 						paddingVertical: SIZES.small,
 					}}
@@ -88,8 +88,8 @@ const HomeHeader = ({ onSearch }) => {
 					/>
 					<TextInput
 						placeholder='Search NTFs'
-						style={{ flex: 1, color: "white" }}
-						onChange={onSearch}
+						style={{ flex: 1, color: 'white' }}
+						onChangeText={onSearch}
 					/>
 				</View>
 			</View>
