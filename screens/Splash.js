@@ -1,42 +1,37 @@
-import { View, Text, StyleSheet, Image } from "react-native";
-import React, { useEffect } from "react";
+import { View, Text, Image, StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
+import { COLORS, SIZES, SHADOWS, assets, FONTS } from '../constants';
 
 const Splash = ({ navigation }) => {
 	useEffect(() => {
 		setTimeout(() => {
-			navigation.replace("Home");
+			navigation.replace('Home');
 		}, [1500]);
 	}, []);
+
 	return (
-		<View style={styles.body}>
+		<View style={styles.container}>
 			<Image
-				style={styles.logo}
-				source={require("../assets/vremcast_square.png")}
-			/>
-			<Text
+				source={assets.logo}
+				resizeMode='contain'
 				style={{
-					color: "white",
-					fontSize: 30,
-					fontWeight: "bold",
-					marginTop: "75%",
+					width: 200,
+					height: 200,
 				}}
-			>
-				VREMCAST
-			</Text>
+			/>
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
-	body: {
+	container: {
 		flex: 1,
-		alignItems: "center",
-		backgroundColor: "#f13e31",
-	},
-	logo: {
-		width: 300,
-		height: 300,
-		marginTop: "30%",
+		padding: 20,
+		width: '100%',
+		alignSelf: 'center',
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#001F2D',
 	},
 });
 
